@@ -1,29 +1,22 @@
-// 创建一个 canvas 图层
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
-// 绘制 10 个绿点
 const CenterX = 200;
 const CenterY = 200;
 const Radius = 150;
 const N = 10;
 var point = [];
-// x = CenterX + Radius * cos(　角度)
-// y = CenterY + Radius * sin(角度)
 
-// (i / N) * (2 * Math.PI) 将 360度 分为 10 等份
 for (var i = 0; i < N; i++) {
-  var x = Math.cos((i / N) * (2 * Math.PI)) * Radius + CenterX;
-  var y = Math.sin((i / N) * (2 * Math.PI)) * Radius + CenterY;
+  var r = 50*Math.random();
+  var x = Math.cos((i / N) * (2 * Math.PI)) * (Radius - r) + CenterX;
+  var y = Math.sin((i / N) * (2 * Math.PI)) * (Radius - r) + CenterY;
   point[i] = [x, y];
 }
-
-// 开始绘画
 ctx.beginPath();
 var xc1 = (point[0][0] + point[N - 1][0]) / 2;
 var yc1 = (point[0][1] + point[N - 1][1]) / 2;
 
-// quadraticCurveTo 绘制一条二次贝塞尔曲线
 ctx.moveTo(xc1, yc1);
 for (var i = 0; i < N - 1; i++) {
   var xc = (point[i][0] + point[i + 1][0]) / 2;
