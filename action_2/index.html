@@ -1,0 +1,17 @@
+<html>
+
+<head>
+  <title>css panint</title>
+</head>
+<link rel="./index.css">
+
+<body>
+  <img src="https://picsum.photos/id/1069/400/400">
+</body>
+<script>
+  if (CSS.paintWorklet) {
+    CSS.paintWorklet.addModule('/step_1.js');
+  } else {
+    alert("Your browser cannot run this demo. Consider Chrome or Edge instead")
+  }
+</script>

@@ -12,6 +12,9 @@ for (var i = 0; i < N; i++) {
   var y = Math.sin(i * (360 / N) * (Math.PI / 180)) * Radius + CenterY;
   point[i] = [x, y];
 }
+
+// 通过控制其中一个点的半径 让他呈现不规则轨迹
+// 让第三个点 靠近圆的中心 大约 50 像素
 point[3][0]= Math.cos(3 * (360 / N)  * (Math.PI / 180)) * (Radius - 50) + CenterX;
 point[3][1]= Math.sin(3 * (360 / N)  * (Math.PI / 180)) * (Radius - 50) + CenterY;
 ctx.beginPath();

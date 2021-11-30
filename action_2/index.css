@@ -1,0 +1,8 @@
+img {
+    -webkit-mask:paint(blob);
+    --n:15;
+  }
+  
+  body {
+    background:pink;
+  }

@@ -8,6 +8,7 @@ const N = 10;
 var point = [];
 
 for (var i = 0; i < N; i++) {
+  // 让每个点偏移 0 - 50 个像素之间的随机值 这样就可以形成一个不规则的圆
   var r = 50*Math.random();
   var x = Math.cos((i / N) * (2 * Math.PI)) * (Radius - r) + CenterX;
   var y = Math.sin((i / N) * (2 * Math.PI)) * (Radius - r) + CenterY;
