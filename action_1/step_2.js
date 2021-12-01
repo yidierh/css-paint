@@ -17,6 +17,7 @@ for (var i = 0; i < N; i++) {
 // 让第三个点 靠近圆的中心 大约 50 像素
 point[3][0]= Math.cos(3 * (360 / N)  * (Math.PI / 180)) * (Radius - 50) + CenterX;
 point[3][1]= Math.sin(3 * (360 / N)  * (Math.PI / 180)) * (Radius - 50) + CenterY;
+
 ctx.beginPath();
 var xc1 = (point[0][0] + point[N - 1][0]) / 2;
 var yc1 = (point[0][1] + point[N - 1][1]) / 2;
