@@ -1,6 +1,6 @@
 // 创建一个 canvas 图层
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // 设置圆心坐标 & 半径
 const CenterX = 200;
@@ -9,16 +9,16 @@ const Radius = 150;
 
 // 定义 10 个 可移动的点
 const N = 10;
-var point = [];
+const point = [];
 
 // 将每个点 10 等分
-for (var i = 0; i < N; i++) {
+for (let i = 0; i < N; i++) {
   // 基本的三角函数 
   // 圆心角 α (i / N) * (2 * Math.PI)
   // x = a + R * cosα
   // y = b + R * sinα
-  var x = Math.cos((i / N) * (2 * Math.PI)) * Radius + CenterX;
-  var y = Math.sin((i / N) * (2 * Math.PI)) * Radius + CenterY;
+  const x = Math.cos((i / N) * (2 * Math.PI)) * Radius + CenterX;
+  const y = Math.sin((i / N) * (2 * Math.PI)) * Radius + CenterY;
   point[i] = [x, y];
 }
 
